@@ -21,7 +21,7 @@ public class Monster implements java.io.Serializable {
         this.health -= dmg;
         
         if (this.health <= 0) {
-            System.out.println("Hirviö kuoli.");
+            System.out.printf("%s on kuollut!\n", this.type);
             return true;
         } else {
             System.out.printf("Hirviöllä on %d elämää jäljellä.\n", this.health);

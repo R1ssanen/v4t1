@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
-        System.out.print("Syötä pelaajan nimi: ");
+        System.out.println("Syötä pelaajan nimi: ");
         String name = scan.next();
 
         Cave cave = new Cave(new Player(name));
@@ -28,9 +28,9 @@ public class App {
 
             switch (choice) {
                 case 1: {
-                    System.out.print("Anna hirviön tyyppi: ");
+                    System.out.println("Anna hirviön tyyppi: ");
                     String type = scan.next();
-                    System.out.print("Anna hirviön elämän määrä numerona: ");
+                    System.out.println("Anna hirviön elämän määrä numerona: ");
                     int health = scan.nextInt();
                     cave.addMonster(new Monster(type, health));
                 } break;
@@ -38,13 +38,13 @@ public class App {
                 case 2: cave.listMonsters(); break;
 
                 case 3: {
-                    System.out.print("Valitse hirviö, johon hyökätä: ");
+                    System.out.println("Valitse hirviö, johon hyökätä: ");
                     int monsterIndex = scan.nextInt();
                     cave.attackMonster(monsterIndex);
                 } break;
 
                 case 4: {
-                    System.out.print("Anna tiedoston nimi, johon peli tallentaa: ");
+                    System.out.println("Anna tiedoston nimi, johon peli tallentaa: ");
                     String fileName = scan.next();
 
                     try {
@@ -58,7 +58,7 @@ public class App {
                 } break;
 
                 case 5: {
-                    System.out.print("Anna tiedoston nimi, josta peli ladataan: ");
+                    System.out.println("Anna tiedoston nimi, josta peli ladataan: ");
                     String fileName = scan.next();
 
                     try {

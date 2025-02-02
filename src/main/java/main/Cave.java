@@ -20,9 +20,13 @@ public class Cave implements java.io.Serializable {
     }
 
     public void listMonsters() {
-        System.out.println("Luolan hirviöt:");
-        for (int i = 0; i < monsters.size(); ++i) {
-            monsters.get(i).printInfo(i + 1);
+        if (monsters.size() == 0) {
+            System.out.println("Luola on tyhjä.");
+        } else {
+            System.out.println("Luolan hirviöt:");
+            for (int i = 0; i < monsters.size(); ++i) {
+                monsters.get(i).printInfo(i + 1);
+            }
         }
     }
 
